@@ -130,8 +130,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1647157182}
   - component: {fileID: 1647157181}
-  - component: {fileID: 1647157180}
   - component: {fileID: 1647157183}
+  - component: {fileID: 1647157180}
   m_Layer: 0
   m_Name: PlaceHolder
   m_TagString: Untagged

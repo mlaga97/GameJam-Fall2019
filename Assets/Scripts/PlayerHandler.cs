@@ -2,18 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using static Item;
-using static Inventory;
-
 public class PlayerHandler : MonoBehaviour
 {
-  // Configurables
-  static int waitTime = 5;
+  public GameObject statusTextBox;
 
   // State variables
   string currentKey;
-  int currentKeyDuration;
+  bool interactionCooldown = false;
+  string statusText = "";
   Inventory inventory = new Inventory();
+  bool busy = false;
+
+  public void StartBusy() {
+    busy = true;
+  }
+
+  public void StopBusy() {
+    busy = false;
+  }
+
+  public bool IsBusy() {
+    return busy;
+  }
 
   // TODO: Find a better way
   GameObject currentTile;
@@ -23,27 +33,71 @@ public class PlayerHandler : MonoBehaviour
     inventory.addItem(new Item("test"));
   }
 
+  IEnumerator InteractCooldown() {
+    yield return new WaitForSeconds(1);
+    interactionCooldown = false;
+  }
+
   // Update is called once per frame
   void Update() {
+    if (busy) return; // Skip the rest if we are "busy"
+
     HandleInventory();
 
-    if (currentTile && currentTile.tag == "Mineable" && Input.GetKey("f")) {
-        Debug.Log("Mining!");
+    if (!interactionCooldown)
+      statusText = "Overworld";
+
+    // Handle mining
+    if (currentTile && !interactionCooldown && currentTile.tag == "Mineable") {
+      statusText = "Press f to mine!";
+
+      if (Input.GetKey("f")) {
+        // Start cooldown timer
+        StartCoroutine(InteractCooldown());
+        interactionCooldown = true;
+
+        statusText = "Mining!";
        
         Ore ore = currentTile.GetComponent<Ore>();
         Item drop = ore.mine();
 
         if (drop != null) {
-          Debug.Log("Mining succeeded!");
+          statusText = "Mining succeeded!";
           inventory.addItem(drop);
         } else {
-          Debug.Log("Mining failed!");
+          statusText = "Mining failed!";
         }
       }
+    }
+
+    // Handle interacting
+    if (currentTile && !interactionCooldown && currentTile.tag == "Interactable") {
+      statusText = "Press f to talk!";
+
+      if (Input.GetKey("f")) {
+        // Start cooldown timer
+        StartCoroutine(InteractCooldown());
+        interactionCooldown = true;
+
+        Interactable interactable = currentTile.GetComponent<Interactable>();
+
+        if (interactable.interact())
+          statusText = "Talking... (Press Space to Continue)";
+        else
+          statusText = "They don't seem to have much to say...";
+      }
+    }
+
+    // Update statusTextBox
+    statusTextBox.GetComponent<UnityEngine.UI.Text>().text = statusText;
   }
 
   void OnTriggerStay2D(Collider2D collider) {
     currentTile = collider.gameObject;
+  }
+
+  void OnTriggerExit2D(Collider2D collider) {
+    currentTile = null;
   }
 
   void HandleInventory() {

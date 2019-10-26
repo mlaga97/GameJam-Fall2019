@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using static Item;
+using static Inventory;
+
 public class PlayerHandler : MonoBehaviour
 {
   // Configurables
@@ -10,14 +13,44 @@ public class PlayerHandler : MonoBehaviour
   // State variables
   string currentKey;
   int currentKeyDuration;
+  Inventory inventory = new Inventory();
+
+  // TODO: Find a better way
+  GameObject currentTile;
 
   // Start is called before the first frame update
   void Start() {
+    inventory.addItem(new Item("test"));
   }
 
   // Update is called once per frame
   void Update() {
     HandleMovement();
+    HandleInventory();
+
+    if (currentTile && currentTile.tag == "Mineable" && Input.GetKey("f")) {
+        Debug.Log("Mining!");
+       
+        Ore ore = currentTile.GetComponent<Ore>();
+        Item drop = ore.mine();
+
+        if (drop != null) {
+          Debug.Log("Mining succeeded!");
+          inventory.addItem(drop);
+        } else {
+          Debug.Log("Mining failed!");
+        }
+      }
+  }
+
+  void OnTriggerStay2D(Collider2D collider) {
+    currentTile = collider.gameObject;
+  }
+
+  void HandleInventory() {
+    // Dump inventory if 
+    if (Input.GetKeyDown("e"))
+      inventory.logItems();
   }
 
   // TODO: Add intialWaitTime
@@ -56,16 +89,16 @@ public class PlayerHandler : MonoBehaviour
 
       switch (currentKey) {
         case "w":
-          transform.Translate(0, 1, Time.deltaTime);
+          transform.Translate(0, 1, 0);
           break;
         case "a":
-          transform.Translate(-1, 0, Time.deltaTime);
+          transform.Translate(-1, 0, 0);
           break;
         case "s":
-          transform.Translate(0, -1, Time.deltaTime);
+          transform.Translate(0, -1, 0);
           break;
         case "d":
-          transform.Translate(1, 0, Time.deltaTime);
+          transform.Translate(1, 0, 0);
           break;
       }
     }

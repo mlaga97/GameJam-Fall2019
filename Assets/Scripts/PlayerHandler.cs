@@ -7,6 +7,8 @@ using static Inventory;
 
 public class PlayerHandler : MonoBehaviour
 {
+  public GameObject txt;
+
   // Configurables
   static int waitTime = 5;
 
@@ -27,23 +29,33 @@ public class PlayerHandler : MonoBehaviour
   void Update() {
     HandleInventory();
 
-    if (currentTile && currentTile.tag == "Mineable" && Input.GetKey("f")) {
-        Debug.Log("Mining!");
+    txt.GetComponent<UnityEngine.UI.Text>().text = "Overworld";
+
+    if (currentTile && currentTile.tag == "Mineable") {
+      txt.GetComponent<UnityEngine.UI.Text>().text = "Press f to mine!";
+
+      if (Input.GetKey("f")) {
+        txt.GetComponent<UnityEngine.UI.Text>().text = "Mining!";
        
         Ore ore = currentTile.GetComponent<Ore>();
         Item drop = ore.mine();
 
         if (drop != null) {
-          Debug.Log("Mining succeeded!");
+          txt.GetComponent<UnityEngine.UI.Text>().text = "Mining succeeded!";
           inventory.addItem(drop);
         } else {
-          Debug.Log("Mining failed!");
+          txt.GetComponent<UnityEngine.UI.Text>().text = "Mining failed!";
         }
       }
+    }
   }
 
   void OnTriggerStay2D(Collider2D collider) {
     currentTile = collider.gameObject;
+  }
+
+  void OnTriggerExit2D(Collider2D collider) {
+    currentTile = null;
   }
 
   void HandleInventory() {

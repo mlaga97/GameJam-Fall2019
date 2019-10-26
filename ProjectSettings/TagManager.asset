@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Wall
   - Mineable
+  - Rocket
+  - Yoda
+  - TrashMan
+  - Cave
+  - Enter
   layers:
   - Default
   - TransparentFX

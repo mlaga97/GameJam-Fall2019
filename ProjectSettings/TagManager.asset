@@ -11,6 +11,7 @@ TagManager:
   - TrashMan
   - Cave
   - Enter
+  - Interactable
   layers:
   - Default
   - TransparentFX

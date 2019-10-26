@@ -14,6 +14,8 @@ public class MovementHandler : MonoBehaviour
   // Handle movement
   // TODO: Add intialWaitTime
   void Update() {
+    if (FindObjectOfType<PlayerHandler>().IsBusy()) return; // Skip the rest if we are "busy"
+
     string lastKey = currentKey;
     currentKey = "";
 

@@ -2,20 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using static Item;
-using static Inventory;
-
 public class PlayerHandler : MonoBehaviour
 {
   public GameObject statusTextBox;
 
-  // Configurables
-  static int waitTime = 5;
-
   // State variables
   string currentKey;
-  int currentKeyDuration;
+  bool interactionCooldown = false;
+  string statusText = "";
   Inventory inventory = new Inventory();
+  bool busy = false;
+
+  public void StartBusy() {
+    busy = true;
+  }
+
+  public void StopBusy() {
+    busy = false;
+  }
+
+  public bool IsBusy() {
+    return busy;
+  }
 
   // TODO: Find a better way
   GameObject currentTile;
@@ -25,17 +33,29 @@ public class PlayerHandler : MonoBehaviour
     inventory.addItem(new Item("test"));
   }
 
+  IEnumerator InteractCooldown() {
+    yield return new WaitForSeconds(1);
+    interactionCooldown = false;
+  }
+
   // Update is called once per frame
   void Update() {
+    if (busy) return; // Skip the rest if we are "busy"
+
     HandleInventory();
 
-    string statusText = "Overworld";
+    if (!interactionCooldown)
+      statusText = "Overworld";
 
     // Handle mining
-    if (currentTile && currentTile.tag == "Mineable") {
+    if (currentTile && !interactionCooldown && currentTile.tag == "Mineable") {
       statusText = "Press f to mine!";
 
       if (Input.GetKey("f")) {
+        // Start cooldown timer
+        StartCoroutine(InteractCooldown());
+        interactionCooldown = true;
+
         statusText = "Mining!";
        
         Ore ore = currentTile.GetComponent<Ore>();
@@ -51,12 +71,20 @@ public class PlayerHandler : MonoBehaviour
     }
 
     // Handle interacting
-    if (currentTile && currentTile.tag == "Interactable") {
+    if (currentTile && !interactionCooldown && currentTile.tag == "Interactable") {
       statusText = "Press f to talk!";
 
       if (Input.GetKey("f")) {
-        NPC npc = currentTile.GetComponent<NPC>();
-        statusText = npc.interact();
+        // Start cooldown timer
+        StartCoroutine(InteractCooldown());
+        interactionCooldown = true;
+
+        Interactable interactable = currentTile.GetComponent<Interactable>();
+
+        if (interactable.interact())
+          statusText = "Talking... (Press Space to Continue)";
+        else
+          statusText = "They don't seem to have much to say...";
       }
     }
 

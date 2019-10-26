@@ -122,6 +122,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: iron
   quantity: 10
-  sprite1: {fileID: 0}
-  sprite2: {fileID: 0}
+  sprite1: {fileID: 21300000, guid: f29b56184c7c1f69e8a83bd5d4d838ed, type: 3}
+  sprite2: {fileID: 21300000, guid: 4ccedb0601c91a51185383ce137b90bc, type: 3}
   spriteRenderer: {fileID: 0}

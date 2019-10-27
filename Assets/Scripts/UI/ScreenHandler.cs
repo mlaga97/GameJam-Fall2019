@@ -8,7 +8,7 @@ public class ScreenHandler : MonoBehaviour
   public string sceneName;
 
   void Update() {
-    if (Input.anyKey) {
+    if (Input.anyKeyDown) {
       SceneManager.LoadScene(sceneName);
     }
   }

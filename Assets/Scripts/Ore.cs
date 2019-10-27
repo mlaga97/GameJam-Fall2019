@@ -5,7 +5,9 @@ using UnityEngine;
 public class Ore : Mineable {
   public string itemID;
   public int quantity;
-  new public TagType[] tags = new TagType[2] {TagType.Walkable, TagType.Mineable};
+
+  // TODO: ???
+  //new public TagType[] tags = new TagType[2] {TagType.Walkable, TagType.Mineable};
 
   public Sprite sprite1;
   public Sprite sprite2;

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1924836648574526719}
   - component: {fileID: 1323971428792638932}
   - component: {fileID: 2676414959922242066}
+  - component: {fileID: -6958849137389580900}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -118,7 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a46c17a5a2705e99726b9c797000c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statusTextBox: {fileID: 0}
 --- !u!61 &1323971428792638932
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 1.4}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1.4, y: 1.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -155,6 +155,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fad59cc2d19cd5f789156e9bfae87e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6958849137389580900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2676414959922242077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f214a85bb6a29ccc87dedfe548eaecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6397834879719943383

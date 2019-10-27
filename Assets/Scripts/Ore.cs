@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ore : MonoBehaviour {
+public class Ore : Mineable {
   public string itemID;
   public int quantity;
+  new public TagType[] tags = new TagType[2] {TagType.Walkable, TagType.Mineable};
 
   public Sprite sprite1;
   public Sprite sprite2;

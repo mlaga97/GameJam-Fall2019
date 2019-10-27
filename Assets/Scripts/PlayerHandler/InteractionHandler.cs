@@ -57,7 +57,7 @@ public class InteractionHandler : MonoBehaviour
 
         Interactable interactable = currentTile.GetComponent<Interactable>();
 
-        if (interactable.interact())
+        if (interactable.Interact())
           status = "Talking... (Press Space to Continue)";
         else
           status = "They don't seem to have much to say...";

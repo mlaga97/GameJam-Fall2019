@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour {
-  public GameObject dialogueTextBox;
-
   private Queue<Dialogue> dialogue;
 
   void Setup() {
-    dialogueTextBox.SetActive(false);
+    // TODO: This won't work unless parent object known...
+    //FindObjectOfType<DialogueText>().SetActive(false);
   }
 
   void Update() {
@@ -19,7 +18,9 @@ public class DialogueManager : MonoBehaviour {
 
   public void StartDialogue(Queue<Dialogue> dialogue) {
     this.dialogue = dialogue;
-    dialogueTextBox.SetActive(true);
+
+    // TODO: This won't work unless parent object known...
+    //FindObjectOfType<DialogueText>().SetActive(true);
 
     // Block player control input
     FindObjectOfType<PlayerHandler>().StartBusy();
@@ -35,13 +36,17 @@ public class DialogueManager : MonoBehaviour {
 
     Dialogue entry = dialogue.Dequeue();
 
-    dialogueTextBox.GetComponent<UnityEngine.UI.Text>().text = entry.name + ": " + entry.sentence;
+    string text = entry.name + ": " + entry.sentence;
+
+    FindObjectOfType<DialogueText>().SetDialogueText(text);
   }
 
   public void EndDialogue() {
     // Un-block player control input
     FindObjectOfType<PlayerHandler>().StopBusy();
 
-    dialogueTextBox.SetActive(false);
+    // TODO: This won't work unless parent object known...
+    //FindObjectOfType<DialogueText>().SetActive(false);
+    FindObjectOfType<DialogueText>().SetDialogueText("");
   }
 }

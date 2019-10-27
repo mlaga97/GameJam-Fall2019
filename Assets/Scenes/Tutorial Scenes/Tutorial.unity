@@ -12110,6 +12110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enter
       objectReference: {fileID: 0}
+    - target: {fileID: 3021037123355640315, guid: dacfa16ad86600c9492d0b98a1d751f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Mineable
+      objectReference: {fileID: 0}
     - target: {fileID: 3021037123355640261, guid: dacfa16ad86600c9492d0b98a1d751f4,
         type: 3}
       propertyPath: m_LocalPosition.x

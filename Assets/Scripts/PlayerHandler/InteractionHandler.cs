@@ -34,8 +34,8 @@ public class InteractionHandler : MonoBehaviour
 
         status = "Mining!";
        
-        Ore ore = currentTile.GetComponent<Ore>();
-        Item drop = ore.mine();
+        Mineable mineable = currentTile.GetComponent<Mineable>();
+        Item drop = mineable.mine();
 
         if (drop != null) {
           status = "Mining succeeded!";

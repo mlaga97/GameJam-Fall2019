@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 84734725220851706}
   - component: {fileID: 84734725220851705}
   - component: {fileID: 84734725220851707}
-  - component: {fileID: 84734725220851708}
+  - component: {fileID: -7922577315749426446}
   m_Layer: 0
   m_Name: ironOre
   m_TagString: Mineable
@@ -108,7 +108,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &84734725220851708
+--- !u!114 &-7922577315749426446
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,11 +117,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 84734725220851704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce9a7e52d6f282d04a6e33e992b8ec7e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6da4c1c12d7f768ca886cb88ad24cf8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: iron
-  quantity: 10
-  sprite1: {fileID: 21300000, guid: f29b56184c7c1f69e8a83bd5d4d838ed, type: 3}
-  sprite2: {fileID: 21300000, guid: 4ccedb0601c91a51185383ce137b90bc, type: 3}
-  spriteRenderer: {fileID: 0}
+  tags: 
+  fullSprite: {fileID: 21300000, guid: f29b56184c7c1f69e8a83bd5d4d838ed, type: 3}
+  emptySprite: {fileID: 21300000, guid: 4ccedb0601c91a51185383ce137b90bc, type: 3}
+  itemID: ore.iron
+  regenTime: 5
+  initialQuantity: 1

@@ -4,12 +4,24 @@ using UnityEngine;
 
 public class MovementHandler : MonoBehaviour
 {
+  public Sprite playerFront;
+  public Sprite playerRear;
+
   // Configurables
   static int waitTime = 5;
 
   // State variables
   string currentKey;
   int currentKeyDuration;
+  int xDir = 1;
+  int yDir = -1;
+
+  private SpriteRenderer spriteRenderer;
+
+  void Start() {
+    spriteRenderer = GetComponent<SpriteRenderer>();
+    spriteRenderer.sprite = playerFront;
+  }
 
   // Handle movement
   // TODO: Add intialWaitTime
@@ -44,23 +56,44 @@ public class MovementHandler : MonoBehaviour
       moveThisTick = false;
     }
 
-    // Handle Movement
     if (moveThisTick) {
       currentKeyDuration = 0; // Reset counter
 
+      // Handle Movement
       switch (currentKey) {
         case "w":
+          yDir = 1;
           transform.Translate(0, 1, 0);
           break;
         case "a":
+          xDir = -1;
           transform.Translate(-1, 0, 0);
           break;
         case "s":
+          yDir = -1;
           transform.Translate(0, -1, 0);
           break;
         case "d":
+          xDir = 1;
           transform.Translate(1, 0, 0);
           break;
+      }
+
+      // Handle Rendering
+      if (yDir > 0) {
+        spriteRenderer.sprite = playerRear;
+        if (xDir < 0) {
+          spriteRenderer.flipX = false;
+        } else {
+          spriteRenderer.flipX = true;
+        }
+      } else {
+        spriteRenderer.sprite = playerFront;
+        if (xDir > 0) {
+          spriteRenderer.flipX = false;
+        } else {
+          spriteRenderer.flipX = true;
+        }
       }
     }
   }

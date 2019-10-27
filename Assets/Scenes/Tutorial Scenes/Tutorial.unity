@@ -2079,7 +2079,7 @@ PrefabInstance:
     - target: {fileID: 6043776656018292461, guid: e5c687f389411efd68e8c594c2bd598e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 220
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6043776656018292461, guid: e5c687f389411efd68e8c594c2bd598e,
         type: 3}
@@ -5753,7 +5753,7 @@ PrefabInstance:
     - target: {fileID: 3021037123355640261, guid: dacfa16ad86600c9492d0b98a1d751f4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 223
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3021037123355640261, guid: dacfa16ad86600c9492d0b98a1d751f4,
         type: 3}
@@ -12711,7 +12711,7 @@ PrefabInstance:
     - target: {fileID: 5605363002146843926, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: m_RootOrder
-      value: 219
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5605363002146843926, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
@@ -12751,7 +12751,7 @@ PrefabInstance:
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest1_start.Array.size
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
@@ -12761,17 +12761,17 @@ PrefabInstance:
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest1_complete.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest1_incomplete.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_start.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
@@ -12786,32 +12786,34 @@ PrefabInstance:
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_incomplete.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest3_incomplete.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest3_complete.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest1_start.Array.data[0].sentence
-      value: gib iron pls
+      value: "Oh my, another person! Hello there, wanderer! My name\u2019s Kristen~!
+        Got a lot of ~premium~ items here for sale, see anythin\u2019 that strikes
+        your fancy?"
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest1_start.Array.data[1].name
-      value: You
+      value: Kristen
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest1_start.Array.data[1].sentence
-      value: k
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
@@ -12821,17 +12823,17 @@ PrefabInstance:
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest1_healing.Array.data[0].sentence
-      value: hab fix
+      value: Lemme patch that up for ya!
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest1_healing.Array.data[1].name
-      value: You
+      value: Kristen
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest1_healing.Array.data[1].sentence
-      value: thnk
+      value: There, good as new!
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
@@ -12841,7 +12843,8 @@ PrefabInstance:
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest1_complete.Array.data[0].sentence
-      value: thank for iron
+      value: "Well wouldja look at that! 10 ores! I\u2019ll have those panels ready
+        for ya in a jiff."
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
@@ -12861,7 +12864,7 @@ PrefabInstance:
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest1_incomplete.Array.data[0].sentence
-      value: cool story bro. needs more iron tho
+      value: Oh dearie, you don't have enough iron.
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
@@ -12871,17 +12874,23 @@ PrefabInstance:
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_start.Array.data[0].sentence
-      value: arm pls
+      value: "Looks like you\u2019ll be needing a control panel next. Lucky for you,
+        I\u2019ve got a pretty good one out back, but I can\u2019t just be givin\u2019
+        out my best stock for free! Tell ya what, I\u2019ll give this to ya, free
+        of charge, if you can do me a little favor."
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_start.Array.data[1].name
-      value: You
+      value: Kristen
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_start.Array.data[1].sentence
-      value: k
+      value: "I\u2019m sure you\u2019ve noticed that I\u2019ve got a bit of an er-
+        dexterity issue here. Let\u2019s just say I had a little run in with the monsters
+        in there-- mean little buggers. Anyway, if you can get my arm back to me in
+        one piece, I\u2019ll gladly hand over this control panel! We got a deal?\n"
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
@@ -12891,12 +12900,12 @@ PrefabInstance:
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_healing.Array.data[0].sentence
-      value: hab fix
+      value: 'Looks like they got ya good. Sorry about that. Lemme heal ya up. '
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_healing.Array.data[1].sentence
-      value: thk
+      value: "Wait you\u2019re going back? Well, shucks, I mighty appreciate that."
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
@@ -12906,17 +12915,18 @@ PrefabInstance:
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_complete.Array.data[0].sentence
-      value: nice! thank
+      value: "My word!! You actually found it! I can\u2019t thank you enough! Here\u2019s
+        the panel for your trouble."
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_complete.Array.data[1].sentence
-      value: np
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_complete.Array.data[1].name
-      value: You
+      value: Kristen
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
@@ -12926,17 +12936,20 @@ PrefabInstance:
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_complete.Array.data[2].sentence
-      value: have panel
+      value: "That ole hermit took your power core you say? Well that\u2019s just
+        a shame. Too bad I don\u2019t have one for ya. He just might be willin\u2019
+        to part with it, but I wouldn\u2019t get yer hopes up. Between you and me
+        that old kook has a few screws loose. "
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_complete.Array.data[3].sentence
-      value: thnk
+      value: "Ya might be able to find him in his shack a bit to the north. \n"
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_complete.Array.data[3].name
-      value: You
+      value: Kristen
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
@@ -12946,12 +12959,13 @@ PrefabInstance:
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_healing.Array.data[1].name
-      value: You
+      value: Kristen
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest2_incomplete.Array.data[0].sentence
-      value: cool story bro. needs more arm tho
+      value: 'Any luck finding it? Oh, you haven''t. Darn. I lost it in the upper
+        cave. '
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
@@ -12976,7 +12990,8 @@ PrefabInstance:
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest3_incomplete.Array.data[0].sentence
-      value: cool story bro. needs more power core tho
+      value: 'The hermit might have a power core. Ya might be able to find him in
+        his shack a bit to the north. '
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
@@ -12996,7 +13011,7 @@ PrefabInstance:
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
       propertyPath: quest3_complete.Array.data[0].sentence
-      value: Thank. Come back after I glue together
+      value: You got the power core? Nice! Lemme build this for you!
       objectReference: {fileID: 0}
     - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
         type: 3}
@@ -13007,6 +13022,96 @@ PrefabInstance:
         type: 3}
       propertyPath: quest3_complete.Array.data[1].name
       value: You
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest1_start.Array.data[2].name
+      value: Kristen
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest1_start.Array.data[3].name
+      value: Kristen
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest1_start.Array.data[4].name
+      value: Kristen
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest1_start.Array.data[5].name
+      value: Kristen
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest1_start.Array.data[2].sentence
+      value: "Oh, that guy. I don\u2019t pay much attention to \u2018im personally.
+        He\u2019s, er\u2026 well, we don\u2019t get along too much\u2026 he\u2019s
+        a bit odd, if ya catch my drift-- How bout this bundle of assorted wires?
+        \n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest1_start.Array.data[4].sentence
+      value: "That\u2019s your rocket that just crashed over there, eh? Should\u2019ve
+        guessed. Suppose ya might be needin\u2019 some parts to get it back in workin\u2019
+        order? We aint\u2019 got much, but it\u2019ll get cha to the planet over there
+        at least. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest1_start.Array.data[6].name
+      value: Kristen
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest1_start.Array.data[7].name
+      value: Kristen
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest1_start.Array.data[6].sentence
+      value: "Looks like you need some panels. Can make ya some for 10 iron ore. I\u2019ll
+        throw in the 5 I have already for free cause I like ya. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest1_start.Array.data[7].sentence
+      value: "Best bet\u2019s gonna be the cave up northwest a little ways, plenty
+        of ore to be had in there."
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest2_start.Array.data[2].name
+      value: Kristen
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest2_start.Array.data[2].sentence
+      value: "All right, you\u2019re gonna want to take another look at the back of
+        the cave. If you look closely, there\u2019s another entrance. Be careful out
+        there bud!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest2_start.Array.data[3].name
+      value: You
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest2_start.Array.data[3].sentence
+      value: k
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest2_start.Array.data[4].name
+      value: You
+      objectReference: {fileID: 0}
+    - target: {fileID: 378456710939969549, guid: 9f64379e8cec4dad5a703b2fb525f683,
+        type: 3}
+      propertyPath: quest2_start.Array.data[4].sentence
+      value: k
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f64379e8cec4dad5a703b2fb525f683, type: 3}
@@ -15885,7 +15990,7 @@ PrefabInstance:
     - target: {fileID: 6160315595087436568, guid: e6f132eb0bc8984e1aeaaf0c1bce6304,
         type: 3}
       propertyPath: m_RootOrder
-      value: 222
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6160315595087436568, guid: e6f132eb0bc8984e1aeaaf0c1bce6304,
         type: 3}
@@ -17192,24 +17297,31 @@ MonoBehaviour:
   quest1_start:
   - name: Hermit
     sprite: {fileID: 0}
-    sentence: Gib slime pls
-  - name: You
+    sentence: "What\u2019s that ye say? Missing a \u201Cpower core\u201D are ye? Well
+      I don\u2019t know anythin about that. Now scram! "
+  - name: Hermit
     sprite: {fileID: 0}
-    sentence: k
+    sentence: "Still on about that core eh? Well there\u2019s nothing I can do for
+      you, boy. Unless\u2026.."
+  - name: Hermit
+    sprite: {fileID: 0}
+    sentence: "Seen any of those little slime critters in the caves? I\u2019ll tell
+      ye what, bring me, say, 5 slime jellies, and I\u2019ll think about helping you
+      find your power core, how bout that, boy? What\u2019s that? You already have
+      some?? Hand em over! "
+  - name: Hermit
+    sprite: {fileID: 0}
+    sentence: "Now git me them 5 slimes. Those ones didn\u2019t count. No slimes,
+      no power core, you hear me? "
   quest1_complete:
   - name: Hermit
     sprite: {fileID: 0}
-    sentence: Thank for slime. Hab power core.
-  - name: You
-    sprite: {fileID: 0}
-    sentence: Np. Thank.
+    sentence: "Ah there it is! Just what I requested, hoo wee! Well, I guess I promised
+      I\u2019d give it back now. Here ye go. \n"
   quest1_incomplete:
   - name: Hermit
     sprite: {fileID: 0}
-    sentence: Gib slm!
-  - name: You
-    sprite: {fileID: 0}
-    sentence: Oh ye
+    sentence: 'No slimes, no power core, you hear me? '
 --- !u!1 &1845998392
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4279853396339729144}
   - component: {fileID: 866760628492094631}
-  - component: {fileID: 1574546242992118486}
   - component: {fileID: 114992251824609720}
+  - component: {fileID: 4565190272834122692}
   m_Layer: 0
   m_Name: diamondore
   m_TagString: Untagged
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6591735888735758990}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.5, y: 5, z: -1}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalPosition: {x: 0, y: 5, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: -1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -82,25 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1574546242992118486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6591735888735758990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce9a7e52d6f282d04a6e33e992b8ec7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tags: 
-  itemID: diamond
-  quantity: 2
-  tags: 0200000004000000
-  sprite1: {fileID: 21300000, guid: 4635f6c02e8b54da7b6371871b888ed1, type: 3}
-  sprite2: {fileID: 21300000, guid: 68edaf50ad08f6b62b4f0820530965ce, type: 3}
-  spriteRenderer: {fileID: 0}
 --- !u!114 &114992251824609720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,3 +95,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tags: 
+  fullSprite: {fileID: 21300000, guid: 4635f6c02e8b54da7b6371871b888ed1, type: 3}
+  emptySprite: {fileID: 21300000, guid: 68edaf50ad08f6b62b4f0820530965ce, type: 3}
+  itemID: diamond
+  regenTime: 20
+  initialQuantity: 1
+--- !u!61 &4565190272834122692
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6591735888735758990}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.65833336, y: 0.65833336}
+    newSize: {x: 6.4, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.65833336, y: 0.65833336}
+  m_EdgeRadius: 0

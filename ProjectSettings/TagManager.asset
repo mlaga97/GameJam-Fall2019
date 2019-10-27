@@ -14,6 +14,7 @@ TagManager:
   - Interactable
   - Traversable
   - Collectable
+  - Attackable
   layers:
   - Default
   - TransparentFX

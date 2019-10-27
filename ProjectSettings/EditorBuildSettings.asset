@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/InBetweenScreens/MainMenu.unity
+    guid: 7b0b78ababae7abf1b1557f03a8c28cf
+  - enabled: 1
+    path: Assets/Scenes/InBetweenScreens/Intro.unity
+    guid: 0d79a9065bf81be99abff4073b07958d
+  - enabled: 1
     path: Assets/Scenes/Tutorial Scenes/Tutorial.unity
     guid: 0001043a2de8e51cb9c599e5502ab19b
   - enabled: 1
@@ -14,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial Scenes/HiddenCave.unity
     guid: 801e820a75ecc144dbee8ca03714ae98
+  - enabled: 1
+    path: Assets/Scenes/InBetweenScreens/ToTheForest.unity
+    guid: b31cfb14403dc8c9d9f3b3e8d376d210
+  - enabled: 1
+    path: Assets/Scenes/InBetweenScreens/YouDied.unity
+    guid: fda5c9c371f1584f3b51a3e2d7bf41f6
+  - enabled: 1
+    path: Assets/Scenes/InBetweenScreens/Credits.unity
+    guid: c483adf15f8b4dfde9a0c381449f8b3d
   m_configObjects: {}

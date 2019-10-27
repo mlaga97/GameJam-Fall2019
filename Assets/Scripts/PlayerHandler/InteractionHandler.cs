@@ -51,6 +51,23 @@ public class InteractionHandler : MonoBehaviour
       }
     }
 
+    // Handle attacking
+    if (currentTile && !interactionCooldown && currentTile.tag == "Attackable") {
+      status = "Press f to attack!";
+
+      if (Input.GetKey("f")) {
+        Attackable attackable = currentTile.GetComponent<Attackable>();
+        Item drop = attackable.Attack();
+
+        if (drop != null) {
+          status = "They dropped an item!";
+          inventory.addItem(drop);
+        } else {
+          status = "Not dead yet!";
+        }
+      }
+    }
+
     // Handle mining
     if (currentTile && !interactionCooldown && currentTile.tag == "Mineable") {
       status = "Press f to mine!";

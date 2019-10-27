@@ -12,6 +12,8 @@ TagManager:
   - Cave
   - Enter
   - Interactable
+  - Traversable
+  - Collectable
   layers:
   - Default
   - TransparentFX

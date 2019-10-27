@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Tutorial Scenes/Tutorial.unity
+    guid: 0001043a2de8e51cb9c599e5502ab19b
+  - enabled: 1
+    path: Assets/Scenes/Tutorial Scenes/Cave.unity
+    guid: 09de721d0b2ffb1e4ae4a19765ee593f
+  - enabled: 1
+    path: Assets/Scenes/Tutorial Scenes/HiddenCave.unity
+    guid: 801e820a75ecc144dbee8ca03714ae98
   m_configObjects: {}

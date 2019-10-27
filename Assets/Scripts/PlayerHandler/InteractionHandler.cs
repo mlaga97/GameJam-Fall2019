@@ -23,6 +23,34 @@ public class InteractionHandler : MonoBehaviour
     if (!interactionCooldown)
       status = "Overworld";
 
+    // Handle teleporting
+    // TODO: Move
+    if (currentTile && currentTile.tag == "Traversable") {
+      status = "Press f to traverse!";
+
+      if (Input.GetKey("f")) {
+        Traversable traversable = currentTile.GetComponent<Traversable>();
+        traversable.Traverse();
+      }
+    }
+
+    // Handle collecting
+    if (currentTile && !interactionCooldown && currentTile.tag == "Collectable") {
+      status = "Press f to pick up!";
+
+      if (Input.GetKey("f")) {
+        Collectable collectable = currentTile.GetComponent<Collectable>();
+        Item drop = collectable.Collect();
+
+        if (drop != null) {
+          status = "Picked up item!";
+          inventory.addItem(drop);
+        } else {
+          status = "You can't pick that up!";
+        }
+      }
+    }
+
     // Handle mining
     if (currentTile && !interactionCooldown && currentTile.tag == "Mineable") {
       status = "Press f to mine!";

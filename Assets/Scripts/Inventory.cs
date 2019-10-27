@@ -19,4 +19,14 @@ public class Inventory {
 
   public void removeItem() {
   }
+
+  public int CheckForItem(Item itemToCheck) {
+    int count = 0;
+
+    foreach (Item item in items)
+      if (item.GetID() == itemToCheck.GetID())
+        count++;
+
+    return count;
+  }
 }

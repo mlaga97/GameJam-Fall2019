@@ -5,6 +5,10 @@ using UnityEngine;
 public class Item {
   string itemID;
 
+  public string GetID() {
+    return itemID;
+  }
+
   public void log() {
     Debug.Log("ItemID: " + itemID);
   }

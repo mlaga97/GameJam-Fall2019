@@ -18,8 +18,6 @@ public class Mineable : Taggable
   //new public TagType[] tags = new TagType[2] {TagType.Walkable, TagType.Mineable};
 
   void Start() {
-    Instantiate(gameObject);
-
     spriteRenderer = GetComponent<SpriteRenderer>();
     spriteRenderer.sprite = fullSprite;
 

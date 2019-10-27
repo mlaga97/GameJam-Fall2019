@@ -7,7 +7,7 @@ public class PlayerHandler : MonoBehaviour
   private GameObject currentTile; // TODO: Find a better way
 
   // State variables
-  Inventory inventory = new Inventory();
+  Inventory inventory;
   bool busy = false;
 
   public void StartBusy() {
@@ -34,7 +34,7 @@ public class PlayerHandler : MonoBehaviour
 
   // Start is called before the first frame update
   void Start() {
-    inventory.addItem(new Item("test"));
+    inventory = FindObjectOfType<DataManager>().inventory;
   }
 
   // Update is called once per frame
@@ -54,7 +54,9 @@ public class PlayerHandler : MonoBehaviour
 
   void HandleInventory() {
     // Dump inventory if 
-    if (Input.GetKeyDown("e"))
+    if (Input.GetKeyDown("e")) {
+      Debug.Log(JsonUtility.ToJson(inventory));
       inventory.logItems();
+    }
   }
 }

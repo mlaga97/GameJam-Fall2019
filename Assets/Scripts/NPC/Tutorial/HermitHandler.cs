@@ -9,7 +9,7 @@ public class HermitHandler : NPC
   public Dialogue[] quest1_start;
   public Dialogue[] quest1_complete;
   public Dialogue[] quest1_incomplete;
-  private int slimesNeeded = 1;
+  private int slimesNeeded = 5;
 
   public override bool Interact() {
     QuestProgress questProgress = FindObjectOfType<DataManager>().questProgress;

@@ -15,7 +15,6 @@ space - continue dialogue
 ![](Screenshots/Screenshot2.png)
 ![](Screenshots/Screenshot3.png)
 ![](Screenshots/Screenshot4.png)
-![](Screenshots/Screenshot5.png)
 ![](Screenshots/Screenshot6.png)
 
 ## Credits
